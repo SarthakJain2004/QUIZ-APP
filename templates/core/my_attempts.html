@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<div class="container py-5" style="min-height: 70vh;">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="mb-4 text-center fw-bold">My Quiz Attempts</h2>
+
+            {% if attempts %}
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered align-middle text-center">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col">Quiz</th>
+                                <th scope="col">Score</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for attempt in attempts %}
+                            <tr>
+                                <td class="fw-medium">{{ attempt.quiz.title }}</td>
+                                <td>{{ attempt.score }}/{{ attempt.total }}</td>
+                                <td>{{ attempt.completed_at|date:"d M Y, H:i" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="text-center text-muted fs-5 mb-0">You haven't attempted any quizzes yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

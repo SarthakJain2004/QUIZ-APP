@@ -1,0 +1,111 @@
+/* Base Styles */
+body {
+    padding-top: 70px;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+}
+
+/* Card Component */
+.card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+/* Badge Styling for Status */
+.badge {
+    padding: 0.4em 0.6em;
+    font-size: 0.75rem;
+    border-radius: 0.35rem;
+    font-weight: 500;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Alert Boxes */
+.alert {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+}
+
+.alert-info {
+    background-color: #e7f3ff;
+    color: #084298;
+    border: 1px solid #b6daff;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #343a40;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #0056b3;
+}
+
+/* Headings */
+h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive grid tweaks (optional) */
+@media (max-width: 767.98px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+}
